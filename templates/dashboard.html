@@ -1,18 +1,18 @@
 {% extends 'app.html' %}
 {% block content %}
 
-
-<div class="container">
+<div class="container mt-4">
   <h2>Welcome to the Dashboard</h2>
 
-    {% if user %}
-        <p>user information</p>
-        <ul>
-            <li>Name : {{ user[1] }}</li>
-            <li>Email : {{ user[2] }}</li>
-        </ul>
-        <a href="/logout" class="btn btn-dark">Logout</a>
-    {% endif %}
+  {% if user %}
+    <p>User information</p>
+    <ul class="list-group mb-3">
+      <li class="list-group-item">Name: {{ user['name'] }}</li>
+      <li class="list-group-item">Email: {{ user['email'] }}</li>
+    </ul>
+
+    <a href="/logout" class="btn btn-dark">Logout</a>
+  {% endif %}
 </div>
 
 {% endblock %}
