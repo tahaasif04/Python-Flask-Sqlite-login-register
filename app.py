@@ -7,7 +7,7 @@ import bcrypt
 import os
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key_here"
+app.secret_key = os.urandom(24)
 DATABASE = "users.db"
 
 
